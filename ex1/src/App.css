@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.fruit-box {
+  height: 340px;
+  display: flex;
+  border: 1px solid blue;
+}
+
+.apple {
+  border: 1px solid red;
+}
+
+.orange {
+  border: 1px solid orange;
+}
