@@ -10,9 +10,12 @@ const FormControl = (props) => {
                 props.type === "textarea" &&
                     <textarea 
                         name={props.name} 
-                        id={props.id} 
+                        id={props.id}
+                        value={props.value} 
                         cols="30" 
-                        rows="10">
+                        rows="10"
+                    >
+                        {props.value}
                     </textarea>
             }
 
@@ -22,7 +25,7 @@ const FormControl = (props) => {
                         type={props.type} 
                         id={props.id} 
                         name={props.name} 
-                        value={props.type === 'submit' ? props.labelText : ''}
+                        value={props.type === 'submit' ? props.labelText : props.value}
                     />
             }
 
@@ -34,7 +37,7 @@ const FormControl = (props) => {
                             type={props.type} 
                             id={props.firstId} 
                             name={props.name} 
-                            value={props.firstValue} 
+                            checked={props.firstChecked}
                         /> 
                         <label htmlFor={props.firstId}>{props.firstValue}</label>
                         <input 
@@ -42,6 +45,7 @@ const FormControl = (props) => {
                             id={props.secondId} 
                             name={props.name} 
                             value={props.firstValue} 
+                            checked={!props.firstChecked}
                         />
                         <label htmlFor={props.secondId}>{props.secondValue}</label>
                     </fieldset>
